@@ -6,7 +6,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #2A0C46, #F3EAF8);
+  background: linear-gradient(to top,#FAEEFF 70%, transparent 70%),url("images/background-top.svg");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,9 +15,12 @@ body {
 
 .faq-container {
   width: 400px;
+  min-height:350px;
   background: white;
   border-radius: 12px;
   padding: 20px;
+  margin-bottom: 200px;
+  margin-top: 100px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -30,9 +33,9 @@ body {
   margin-bottom: 10px;
 }
 
-icon {
-  width: 14px;
-  height: 14px;
+.icon {
+  width: 20px;
+  height: 20px;
   margin-right: 10px;
   display: inline-block;
 }
@@ -63,8 +66,8 @@ icon {
 
 
 .faq-label .circle {
-  width: 24px;
-  height: 24px;
+  width: 14px;
+  height: 14px;
   background-color: #6A0DAD;
   color: white;
   display: flex;
