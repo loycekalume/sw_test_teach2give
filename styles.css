@@ -1,3 +1,4 @@
+/* Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(to top,#FAEEFF 70%, transparent 70%),url("images/background-top.svg");
+  background: linear-gradient(to top, #FAEEFF 70%, transparent 70%), url("images/background-top.svg");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +31,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #2A0C46;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .icon {
@@ -60,10 +61,11 @@ body {
   color: #333;
   cursor: pointer;
   transition: color 0.3s;
-
 }
 
-
+.faq-label:hover {
+  color: #6A0DAD;
+}
 
 .faq-label .circle {
   width: 14px;
@@ -78,8 +80,9 @@ body {
   transition: background-color 0.3s ease;
 }
 
+/* Hide radio inputs */
 .faq-input {
-  display: none;
+  display: none; 
 }
 
 .faq-content {
@@ -90,16 +93,16 @@ body {
   line-height: 1.5;
 }
 
-/* Toggle Visibility */
+/* Toggle Visibility (Accordion Behavior) */
 .faq-input:checked+.faq-label+.faq-content {
   display: block;
 }
 
 .faq-input:checked+.faq-label .circle {
   background-color: #2e2d2d;
-  /* Circle color changes */
 }
 
+ /* Change "+" to "-" when expanded */
 .faq-input:checked+.faq-label .circle::before {
   content: "-";
 }
@@ -107,4 +110,37 @@ body {
 .faq-label .circle::before {
   content: "+";
   transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .faq-container {
+    width: 90%; 
+  }
+
+  .faq-label {
+    flex-direction: column; 
+    align-items: flex-start;
+  }
+
+  .faq-label .circle {
+    align-self: flex-end; 
+  }
+
+  .faq-content {
+    font-size: 13px; 
+  }
+}
+
+/* Tablet and Desktop Styles */
+@media (min-width: 769px) {
+  .faq-container {
+    max-width: 600px; 
+  }
+
+  .faq-item {
+    display: block;
+  }
 }
